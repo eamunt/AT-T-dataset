@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet" type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Results Page</title>
+
+        <style type="text/css">
+            th{
+                text-align: center;
+                font-size: 20px;
+            }
+
+            td{
+                text-align: center;
+                font-size: 18px;
+            }
+            img.result-img {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "second-main" style = "height: 100% ; width: 100%">
+            
+
+            <div class = "info" style="margin-top: 30px;">
+                <h3 style="text-align: center; width: 100%"><a href="/" >HomePage</a></h3>
+                <table class="table" border="1px solid black" style="width: 60%;margin: 15px auto;">
+                    <thead>
+                      <tr>
+                        <th scope="col">Upload image</th>
+                        <th scope="col">Model Prediction</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td scope="row"><img style="border: 1px solid black;" class = "result-img" src={{url_for('static', filename = '/Users/haokahnguyen/Desktop/course/May_hoc_nang_cao/CNN/static/images/'+ img)}}></td>
+                        <td>Class: {{ predictions.class1 }}</td>
+                        
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                  
+                
+            </div>
+        </div>
+    </body>
+</html>
